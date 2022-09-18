@@ -1,0 +1,16 @@
+.deliver-order {
+  background-color: #F2F6F7;
+  padding: 1.5em;
+  margin-left: 5rem;
+}
+  
+h1, h2, p {
+  font-family: 'Rubik';
+  color: #104E5B;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}

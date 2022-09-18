@@ -1,19 +1,17 @@
 <div class="order-summary">
-  <div class="order-summary-inputs"  >
-   <app-input
-    label = "Cliente"
-    type = "text"
-    placeholder= "Susana"
-    ></app-input>
-    <app-input
-    label = "N° de mesa"
-    type = "text"
-    placeholder= "N° 1"
-    ></app-input>
+  <div class="order-summary-inputs">
+    <div class="order-summary-input">
+      <label>Cliente</label>
+      <input type=text  placeholder="Susana" #client required/>
+    </div>
+    <div class="order-summary-input">
+      <label>N° de mesa</label>
+      <input type=number  placeholder="N° 1" #mesa required />
+    </div>
   </div>
-<table>
+<table class="order-table">
   <thead class="table-head" >
-    <tr>
+    <tr class="table-row">
       <th>Producto</th>
       <th>Unidades</th>
       <th>Precio</th>
@@ -21,41 +19,21 @@
     </tr>
   </thead>
   <tbody class="table-body" >
-    <tr>
-        <td>Café americano</td>
-        <td>
-          <div class="table-counter" >
-            <span>+</span>
-            <p>1</p>
-            <span>-</span>
-          </div>
-        </td>
-        <td>5.90</td>
-        <td class="table-trash" >
-          <fa-icon [icon]="trash"></fa-icon>
-        </td>
-    </tr>
-    <tr>
-      <td>Café americano</td>
-      <td>
-        <div class="table-counter" >
-          <span>+</span>
-          <p>1</p>
-          <span>-</span>
-        </div>
-      </td>
-      <td>5.90</td>
-      <td class="table-trash" >
-        <fa-icon [icon]="trash"></fa-icon>
-      </td>
-  </tr>
+    <app-summary-item
+      *ngFor="let filteredItem of filteredItems| keyvalue "
+      [filteredItem] = "filteredItem.value"
+    ></app-summary-item>
   </tbody>
   <tfoot class="table-total" >
     <tr>
       <td>Total</td>
       <td></td>
-      <td>$5.90</td>
+      <td>${{calcTotal()}}</td>
     </tr>
   </tfoot>
 </table>
+</div>
+<div class="maker-oder-buttons" >
+  <app-button text = "Confirmar" (click)="sendOrder(client.value, mesa.value)"></app-button>
+  <app-button text = "Cancelar" (click)="cancelOrder()" ></app-button>
 </div>

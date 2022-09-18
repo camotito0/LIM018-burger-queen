@@ -1,0 +1,26 @@
+<app-navbar 
+    [navbarTabs] = "navbarTabs"
+></app-navbar>
+<main class="main-form">
+    <div class="container">
+        <h2>Formulario de registro</h2>
+        <form>
+            <label>Nombre de usuario:</label>
+            <input type="text" placeholder="jhondoe" [(ngModel)] = "username" name="username" required/>
+        
+            <label>Nombre y apellido:</label>
+            <input type="text" placeholder="Jhon Doe" [(ngModel)] = "fullname" name="fullname" required/>
+        
+            <label>Cargo:</label>
+            <input type="text" placeholder="chef o mesero" [(ngModel)] = "role" name="role" required/>
+        
+            <label>Email:</label>
+            <input type="email" placeholder="jhondoe@mail.com" [(ngModel)] = "email" name="email" required/>
+        
+            <label>Contraseña:</label>
+            <input type="password" placeholder="contraseña" [(ngModel)] = "password" name="password" required/>
+        
+            <button type="button" (click)="createUserFirestore()" [disabled]="!username || !fullname || !role || !email || !password">Registrar</button>
+        </form>
+    </div>
+</main>
