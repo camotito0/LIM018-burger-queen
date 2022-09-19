@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RegisterFormComponent } from './register-form.component';
-import { FIREBASE_OPTIONS } from '@angular/fire/compat';
-import { firebaseConfig } from '../../app.module';
+import { AuthtenticationService } from 'src/app/services/authtentication.service';
+import { FirestoreService } from 'src/app/services/firestore.service';
 
 describe('RegisterFormComponent', () => {
   let component: RegisterFormComponent;
@@ -10,7 +10,10 @@ describe('RegisterFormComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ RegisterFormComponent ],
-      providers: [ {provide:  FIREBASE_OPTIONS, useValue: firebaseConfig}]
+      providers: [ 
+        {provide:  AuthtenticationService, useValue: {}},
+        {provide:  FirestoreService, useValue: {}}
+      ]
     })
     .compileComponents();
 

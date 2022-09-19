@@ -8,7 +8,7 @@ import { AuthtenticationService } from 'src/app/services/authtentication.service
 })
 export class LoginComponent implements OnInit {
   text:string
-  constructor(
+  constructor (
     public authService : AuthtenticationService
   ) { }
 
