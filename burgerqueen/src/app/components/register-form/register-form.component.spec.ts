@@ -25,4 +25,9 @@ describe('RegisterFormComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should create a form with 6 inputs', () => {
+
+  });
+
 });
