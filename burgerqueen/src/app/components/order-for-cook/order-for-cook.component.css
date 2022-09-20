@@ -1,13 +1,2 @@
-main {
-  margin-left: 5rem;
-}
 
-h2 {
-  text-align: center;
-  color: #1c5763;
-  padding-block: 1rem;
-}
 
-app-order-table {
-  display: flex;
-}
