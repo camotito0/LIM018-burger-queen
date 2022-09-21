@@ -25,14 +25,9 @@ describe('OrderForCookComponent', () => {
         orderItemsDummie[0].state = state
       },
       getOrdersByState: function (state) {
-        return of([{
-            payload: {
-              doc: {
-                data: function (){},
-                id: '123'
-              }
-            }
-        }])
+        let t = orderItemsDummie.filter(items => items.state === state)
+        component.orderItems = t;
+        return of(t)
       }
     }
 
@@ -50,12 +45,12 @@ describe('OrderForCookComponent', () => {
     component = fixture.componentInstance;
     // component = fixtureChild.componentInstance;
     firestoreService = TestBed.inject(FirestoreService)
-    fixture.detectChanges();
-    // component.buttonAction = 'preparando'
-    // component.state= 'preparando'
-    component.orderItems= orderItemsDummie
-    fixture.detectChanges();
+/*     fixture.detectChanges();
+ */    // component.buttonAction = 'preparando'
+    // component.state = 'preparando'
+    component.orderItems = orderItemsDummie
     childComponent = fixture.debugElement.query(By.directive(OrderTableComponent)).componentInstance
+    fixture.detectChanges();
   });
 
   it('should create', () => {
@@ -76,9 +71,14 @@ describe('OrderForCookComponent', () => {
     mainEl = fixture.nativeElement.querySelector('main')
     fixture.detectChanges();
     console.log(mainEl);
-    
-    deliverDebugEl = fixture.debugElement.query(By.css('.deliver-btn'))   
+    console.log(orderItemsDummie, 'ANtes del click');
+
+    deliverDebugEl = fixture.debugElement.query(By.css('.deliver-btn'))
     deliverDebugEl.triggerEventHandler('click', null)
+    console.log(orderItemsDummie, 'DESPUES del click');
+    component.listOrdes
+    fixture.detectChanges();
+
     const test = mainEl.textContent.includes('Candas')
     expect(test).toBe(false);
   });
