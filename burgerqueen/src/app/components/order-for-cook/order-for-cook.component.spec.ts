@@ -43,15 +43,8 @@ xdescribe('OrderForCookComponent', () => {
     fixture = TestBed.createComponent(OrderForCookComponent);
     component = fixture.componentInstance;
     firestoreService = TestBed.inject(FirestoreService)
-<<<<<<< HEAD
-/*     fixture.detectChanges();
- */    // component.buttonAction = 'preparando'
-    // component.state = 'preparando'
-    component.orderItems = orderItemsDummie
-=======
     component.orderItems = orderItemsDummie
     fixture.detectChanges();
->>>>>>> 74e5f4e0d45e134cda83294964ff6e52fa889f6a
     childComponent = fixture.debugElement.query(By.directive(OrderTableComponent)).componentInstance
     fixture.detectChanges();
   });
@@ -81,14 +74,6 @@ xdescribe('OrderForCookComponent', () => {
 
     deliverDebugEl = fixture.debugElement.query(By.css('.deliver-btn'))
     deliverDebugEl.triggerEventHandler('click', null)
-<<<<<<< HEAD
-    console.log(orderItemsDummie, 'DESPUES del click');
-    component.listOrdes
-    fixture.detectChanges();
-
-    const test = mainEl.textContent.includes('Candas')
-    expect(test).toBe(false);
-=======
     console.log(orderItemsDummie);
     
     fixture.detectChanges();
@@ -96,6 +81,5 @@ xdescribe('OrderForCookComponent', () => {
 
     const itemWithCookingState = mainEl.textContent.includes('Candas')
     expect(itemWithCookingState).toBe(false);
->>>>>>> 74e5f4e0d45e134cda83294964ff6e52fa889f6a
   });
 });

@@ -1,4 +1,4 @@
-h1, p, button, input::placeholder{
+h1, p, button, input::placeholder {
   font-family: 'Rubik', sans-serif;
   color: #104E5B;
 }
