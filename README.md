@@ -1,19 +1,20 @@
 # Burger Queen
 
 ## ÍNDICE
-* [1. BurgerQueen](#1-BurgerQueen)
-  - [1.1 Descripción del Proyecto](##1.1-Descripción-del-Proyecto)
-  - [1.2 Descripción de Roles](##1.2-Descripción-de-Roles)
-  - [1.3 Contenido según la vista y el rol](##1.3-Contenido-según-la-vista-y-el-rol)
-  - [1.4 Interacción con la página](##1.4-Interacción-con-la-página)
-* [2. Sobre el Usuario](#2-Sobre-el-Usuario)
-  - [2.1 Descripción general](##2.1-Descripción-general)
-  - [2.2 Flujograma de los estados para el Pedido](##2.2-Flujograma-de-los-estados-para-el-Pedido)
-* [3. Realización del Diseño](#3-Realizacion-del-Diseño)
-  - [3.1 Diseño ](##3.1-Diseño)
-* [4. Tecnologías empleadas](#4-Tecnologias-Empleadas)
-* [5. Fuentes](#5-Fuentes)
-* [6. Autores](#6-Autores)
+- [Burger Queen](#burger-queen)
+  - [ÍNDICE](#índice)
+- [1. BurgerQueen](#1-burgerqueen)
+  - [1.1  Descripción del Proyecto](#11--descripción-del-proyecto)
+  - [1.2 Descripción de Roles](#12-descripción-de-roles)
+  - [1.3 Contenido según la vista y el rol](#13-contenido-según-la-vista-y-el-rol)
+  - [1.4 Interacción con la página](#14-interacción-con-la-página)
+- [2. Sobre el Usuario](#2-sobre-el-usuario)
+  - [2.1 Descripción general](#21-descripción-general)
+  - [2.2 Flujograma de los estados para el Pedido](#22-flujograma-de-los-estados-para-el-pedido)
+- [3. Realización del Diseño](#3-realización-del-diseño)
+  - [3.1 Diseño](#31-diseño)
+- [4. Tecnologías empleadas](#4-tecnologías-empleadas)
+- [5. Autores](#5-autores)
 
 ***
 
@@ -60,7 +61,7 @@ Los usuarios principales son el chef, el mesero y el administrador de la hamburg
  
 ## 2.2 Flujograma de los estados para el Pedido
 <div align = “center”>
-<img src="https://miro.com/app/live-embed/uXjVPTxLrjQ=/?moveToViewport=-3273,-545,4361,2287&embedId=876349619921"/>
+<img src="../LIM018-burger-queen/burgerqueen/src/assets/images/burgerqueen-flowchart.png"/>
 </div>
 
 # 3. Realización del Diseño
